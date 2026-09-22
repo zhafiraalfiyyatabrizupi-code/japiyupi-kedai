@@ -46,24 +46,11 @@ const NAMA_KEDAI = "japiyupi kedai";
 let namaKasir = "Kak Tabriz";
 namaKasir = "Kak Inesh"; // bukti let bisa diubah
 
-alert("Selamat datang di " + NAMA_KEDAI + "!");
-let namaPelanggan = prompt("Masukkan nama Anda:");
-
-if (namaPelanggan) {
-  console.log("Halo, " + namaPelanggan + "!");
-} else {
-  namaPelanggan = "Pelanggan japiyupi viewers";
-  console.log("Halo, " + namaPelanggan + "!");
-}
-
-
-
-
 // ---- DEMO PERBEDAAN LET vs CONST ----
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
-namaKasir = "Kak Inesh";
+namaKasir = "Kak Inesh"; // bukti let bisa diubah
 console.log("Nama kasir sekarang: " + namaKasir);
 
 
@@ -77,7 +64,9 @@ console.log("Nama kasir sekarang: " + namaKasir);
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
 alert("Selamat datang di " + NAMA_KEDAI + "!");
+
 let namaPelanggan = prompt("Masukkan nama Anda:");
+
 if (namaPelanggan) {
   alert("Halo, " + namaPelanggan + "! Terima kasih sudah berkunjung.");
   console.log("Nama pelanggan: " + namaPelanggan);
@@ -198,18 +187,27 @@ console.log("Pelanggan C - Total Poin: " + totalPoinC + ", Tier: " + tierC);
 
 // TODO 6A:
 // Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
-
-
+let menuRekomendasi = [
+  "Caramel Macchiato",
+  "Classic Milo",
+  "Butterscotch Sea Salt Latte",
+  "Kouign Amann",
+  "Biscoff chesee"
+];
 
 
 // TODO 6B:
 // Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
 // "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
-
+console.log("=== MENU REKOMENDASI UNTUK MEMBER ===");
+for (let i = 0; i < menuRekomendasi.length; i++) {
+  console.log((i + 1) + ". " + menuRekomendasi[i]);
+}
 
 
 
 // TODO 6C:
 // Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
-
+console.log("Total Menu Favorit: " + menuRekomendasi.length + " menu");
+console.log("=== Yuhu japiyupi is ready to keep you company anytime ===");
